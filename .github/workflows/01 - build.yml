@@ -19,8 +19,8 @@ jobs:
       - name: Set up GraalVM
         uses: graalvm/setup-graalvm@v1
         with:
-          version: '22.3.0' # Specify the GraalVM version you need
-          java-version: '21' # Specify the Java version you need
+          version: '23.0.0' # Update to the latest GraalVM version
+          java-version: '21' # Ensure Java 21 is supported by this version
 
       - name: Set up Maven
         uses: actions/setup-java@v2
