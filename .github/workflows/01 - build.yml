@@ -1,0 +1,38 @@
+name: Build with Spring Boot AOT
+
+on:
+  push:
+    branches:
+      - feature/*
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up GraalVM
+        uses: graalvm/setup-graalvm@v1
+        with:
+          version: '22.3.0' # Specify the GraalVM version you need
+          java-version: '21' # Specify the Java version you need
+
+      - name: Set up Maven
+        uses: actions/setup-java@v2
+        with:
+          distribution: 'temurin'
+          java-version: '21'
+
+      - name: Build with Maven
+        run: mvn clean package -Pnative -Dspring-boot.aot.enabled=true
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: native-image
+          path: target/
