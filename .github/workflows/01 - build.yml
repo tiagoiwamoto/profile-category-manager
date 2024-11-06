@@ -14,19 +14,14 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Set up GraalVM
         uses: graalvm/setup-graalvm@v1
         with:
-          version: '23.0.1' # Update to the latest GraalVM version
-          java-version: '21' # Ensure Java 21 is supported by this version
-
-      - name: Set up Maven
-        uses: actions/setup-java@v2
-        with:
-          distribution: 'temurin'
           java-version: '21'
+          distribution: 'graalvm' # Update to the latest GraalVM version
+
 
       - name: Build with Maven
         run: mvn clean package -Pnative -Dspring-boot.aot.enabled=true
