@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+
+option java_package = "br.com.kamehouse.profilecategorymanager.grpc";
+option java_outer_classname = "CategoryServiceProto";
+
+message Category {
+  string name = 1;
+  string description = 2;
+  string createdAt = 3;
+  string updatedAt = 4;
+}
+
+message CategoryId {
+  string id = 1;
+}
+
+message CategoryList {
+  repeated Category categories = 1;
+}
+
+service CategoryService {
+  rpc CreateCategory(Category) returns (CategoryId);
+  rpc GetCategory(CategoryId) returns (Category);
+  rpc UpdateCategory(Category) returns (Category);
+  rpc DeleteCategory(CategoryId) returns (CategoryId);
+  rpc ListCategories(google.protobuf.Empty) returns (CategoryList);
+}
