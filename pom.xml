@@ -97,6 +97,11 @@
 
         <!-- GRPC -->
         <dependency>
+            <groupId>jakarta.annotation</groupId>
+            <artifactId>jakarta.annotation-api</artifactId>
+            <version>2.0.0</version>
+        </dependency>
+        <dependency>
             <groupId>io.grpc</groupId>
             <artifactId>grpc-netty-shaded</artifactId>
             <version>1.56.0</version>
@@ -140,19 +145,6 @@
             <plugin>
                 <groupId>org.graalvm.buildtools</groupId>
                 <artifactId>native-maven-plugin</artifactId>
-                <configuration>
-                    <agent>
-                        <enabled>true</enabled>
-                        <config>
-                            <include>
-                                <pattern>io.grpc.**</pattern>
-                                <pattern>io.netty.**</pattern>
-                                <pattern>com.google.protobuf.**</pattern>
-                                <pattern>org.springframework.**</pattern>
-                            </include>
-                        </config>
-                    </agent>
-                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
@@ -166,18 +158,12 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <excludes>
-                        <exclude>
-                            <groupId>org.projectlombok</groupId>
-                            <artifactId>lombok</artifactId>
-                        </exclude>
-                    </excludes>
-                    <jvmArguments>
-                        -agentlib:native-image-agent=config-output-dir=src/main/resources/META-INF/native-image
-                    </jvmArguments>
+                    <mainClass>br.com.kamehouse.profilecategorymanager.App</mainClass>
+                    <jvmArguments>-agentlib:native-image-agent=config-output-dir=src/main/resources/META-INF/native-image</jvmArguments>
                 </configuration>
             </plugin>
             <!-- GRPC -->
+            <!-- Protobuf Plugin -->
             <plugin>
                 <groupId>org.xolstice.maven.plugins</groupId>
                 <artifactId>protobuf-maven-plugin</artifactId>
@@ -196,6 +182,27 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <version>3.1.0</version>
+                <executions>
+                    <execution>
+                        <phase>generate-sources</phase>
+                        <configuration>
+                            <target>
+                                <replaceregexp file="target/generated-sources/protobuf/grpc-java/br/com/kamehouse/profilecategorymanager/grpc/CategoryServiceGrpc.java"
+                                               match="javax.annotation.Generated"
+                                               replace="jakarta.annotation.Generated"
+                                               byline="true"/>
+                            </target>
+                        </configuration>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
 
@@ -207,6 +214,7 @@
                     <plugin>
                         <groupId>org.graalvm.buildtools</groupId>
                         <artifactId>native-maven-plugin</artifactId>
+                        <extensions>true</extensions>
                         <executions>
                             <execution>
                                 <id>build-native</id>
@@ -219,12 +227,10 @@
                         <configuration>
                             <skipNativeTests>true</skipNativeTests>
                             <buildArgs>
-                                --no-fallback
-                                --allow-incomplete-classpath
-                                --report-unsupported-elements-at-runtime
-                                --initialize-at-build-time
-                                --no-server
-                                --static
+                                <arg>
+                                    --verbose
+                                    -H:+ReportExceptionStackTraces
+                                </arg>
                             </buildArgs>
                             <agent>
                                 <enabled>true</enabled>
