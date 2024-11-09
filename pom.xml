@@ -200,34 +200,35 @@
                     <jvmArguments>-agentlib:native-image-agent=config-output-dir=src/main/resources/META-INF/native-image</jvmArguments>
                 </configuration>
             </plugin>
-<!--            <plugin>-->
-<!--                <groupId>com.github.os72</groupId>-->
-<!--                <artifactId>protoc-jar-maven-plugin</artifactId>-->
-<!--                <version>3.11.4</version>-->
-<!--                <executions>-->
-<!--                    <execution>-->
-<!--                        <phase>generate-sources</phase>-->
-<!--                        <goals>-->
-<!--                            <goal>run</goal>-->
-<!--                        </goals>-->
-<!--                        <configuration>-->
-<!--                            <protocVersion>3.19.4</protocVersion>-->
-<!--                            <inputDirectories>-->
-<!--                                <include>src/main/proto</include>-->
-<!--                            </inputDirectories>-->
-<!--                            <outputTargets>-->
-<!--                                <outputTarget>-->
-<!--                                    <type>java</type>-->
-<!--                                </outputTarget>-->
-<!--                                <outputTarget>-->
-<!--                                    <type>grpc-java</type>-->
-<!--                                    <pluginArtifact>io.grpc:protoc-gen-grpc-java:1.49.2</pluginArtifact>-->
-<!--                                </outputTarget>-->
-<!--                            </outputTargets>-->
-<!--                        </configuration>-->
-<!--                    </execution>-->
-<!--                </executions>-->
-<!--            </plugin>-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.xolstice.maven.plugins</groupId>
+                <artifactId>protobuf-maven-plugin</artifactId>
+                <version>0.6.1</version>
+                <configuration>
+                    <protocArtifact>
+                        com.google.protobuf:protoc:3.25.1:exe:${os.detected.classifier}
+                    </protocArtifact>
+                    <pluginId>grpc-java</pluginId>
+                    <pluginArtifact>
+                        io.grpc:protoc-gen-grpc-java:1.58.0:exe:${os.detected.classifier}
+                    </pluginArtifact>
+                    <protoSourceRoot>
+                        ${basedir}/src/main/proto/
+                    </protoSourceRoot>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>compile</goal>
+                            <goal>compile-custom</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
 
