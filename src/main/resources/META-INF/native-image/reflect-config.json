@@ -65,6 +65,25 @@
   "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"CGLIB$SET_STATIC_CALLBACKS","parameterTypes":["org.springframework.cglib.proxy.Callback[]"] }, {"name":"CGLIB$SET_THREAD_CALLBACKS","parameterTypes":["org.springframework.cglib.proxy.Callback[]"] }]
 },
 {
+  "name":"br.com.kamehouse.profilecategorymanager.CategoryServiceGrpc$AsyncService",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllPublicMethods":true,
+  "queryAllDeclaredConstructors":true
+},
+{
+  "name":"br.com.kamehouse.profilecategorymanager.CategoryServiceGrpc$CategoryServiceImplBase",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllDeclaredConstructors":true
+},
+{
+  "name":"br.com.kamehouse.profilecategorymanager.adapter.CategoryAdapter",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllDeclaredConstructors":true
+},
+{
   "name":"br.com.kamehouse.profilecategorymanager.config.ErrorHandler",
   "allDeclaredFields":true,
   "queryAllDeclaredMethods":true,
@@ -202,6 +221,9 @@
 },
 {
   "name":"co.elastic.clients.transport.ElasticsearchTransport"
+},
+{
+  "name":"com.alibaba.cloud.nacos.registry.NacosRegistration"
 },
 {
   "name":"com.couchbase.client.java.Bucket"
@@ -416,6 +438,14 @@
   "name":"groovy.text.markup.MarkupTemplateEngine"
 },
 {
+  "name":"io.grpc.BindableService",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllPublicMethods":true,
+  "queryAllDeclaredConstructors":true,
+  "methods":[{"name":"close","parameterTypes":[] }, {"name":"shutdown","parameterTypes":[] }]
+},
+{
   "name":"io.grpc.CallCredentials"
 },
 {
@@ -437,6 +467,13 @@
   "methods":[{"name":"close","parameterTypes":[] }, {"name":"shutdown","parameterTypes":[] }]
 },
 {
+  "name":"io.grpc.Context$CancellationListener",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllPublicMethods":true,
+  "queryAllDeclaredConstructors":true
+},
+{
   "name":"io.grpc.DecompressorRegistry",
   "allDeclaredFields":true,
   "queryAllDeclaredMethods":true,
@@ -444,13 +481,52 @@
   "methods":[{"name":"close","parameterTypes":[] }, {"name":"shutdown","parameterTypes":[] }]
 },
 {
+  "name":"io.grpc.NameResolver$Factory",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllDeclaredConstructors":true
+},
+{
+  "name":"io.grpc.NameResolverProvider",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllDeclaredConstructors":true
+},
+{
+  "name":"io.grpc.Server"
+},
+{
+  "name":"io.grpc.ServerInterceptor",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllPublicMethods":true,
+  "queryAllDeclaredConstructors":true,
+  "methods":[{"name":"close","parameterTypes":[] }, {"name":"shutdown","parameterTypes":[] }]
+},
+{
   "name":"io.grpc.netty.NettyChannelBuilder"
+},
+{
+  "name":"io.grpc.netty.NettyServerBuilder"
 },
 {
   "name":"io.grpc.netty.shaded.io.grpc.netty.NettyChannelBuilder"
 },
 {
+  "name":"io.grpc.netty.shaded.io.grpc.netty.NettyServerBuilder"
+},
+{
   "name":"io.grpc.netty.shaded.io.netty.channel.Channel"
+},
+{
+  "name":"io.grpc.protobuf.services.HealthStatusManager",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllDeclaredConstructors":true,
+  "methods":[{"name":"close","parameterTypes":[] }, {"name":"shutdown","parameterTypes":[] }]
+},
+{
+  "name":"io.grpc.protobuf.services.ProtoReflectionService"
 },
 {
   "name":"io.lettuce.core.metrics.MicrometerCommandLatencyRecorder"
@@ -513,6 +589,13 @@
 },
 {
   "name":"io.micrometer.core.instrument.binder.grpc.MetricCollectingClientInterceptor",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllDeclaredConstructors":true,
+  "methods":[{"name":"close","parameterTypes":[] }, {"name":"shutdown","parameterTypes":[] }]
+},
+{
+  "name":"io.micrometer.core.instrument.binder.grpc.MetricCollectingServerInterceptor",
   "allDeclaredFields":true,
   "queryAllDeclaredMethods":true,
   "queryAllDeclaredConstructors":true,
@@ -1166,6 +1249,13 @@
   "queryAllDeclaredConstructors":true
 },
 {
+  "name":"java.util.function.Consumer",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllPublicMethods":true,
+  "queryAllDeclaredConstructors":true
+},
+{
   "name":"java.util.logging.LogManager"
 },
 {
@@ -1417,6 +1507,189 @@
 },
 {
   "name":"net.devh.boot.grpc.common.codec.GrpcCodecDiscoverer",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllDeclaredConstructors":true,
+  "methods":[{"name":"close","parameterTypes":[] }, {"name":"shutdown","parameterTypes":[] }]
+},
+{
+  "name":"net.devh.boot.grpc.server.advice.GrpcAdviceIsPresentCondition",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"net.devh.boot.grpc.server.autoconfigure.GrpcHealthServiceAutoConfiguration",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllDeclaredConstructors":true
+},
+{
+  "name":"net.devh.boot.grpc.server.autoconfigure.GrpcHealthServiceAutoConfiguration$$SpringCGLIB$$0",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllDeclaredConstructors":true,
+  "fields":[{"name":"CGLIB$FACTORY_DATA"}],
+  "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"CGLIB$SET_STATIC_CALLBACKS","parameterTypes":["org.springframework.cglib.proxy.Callback[]"] }, {"name":"CGLIB$SET_THREAD_CALLBACKS","parameterTypes":["org.springframework.cglib.proxy.Callback[]"] }]
+},
+{
+  "name":"net.devh.boot.grpc.server.autoconfigure.GrpcHealthServiceAutoConfiguration$$SpringCGLIB$$FastClass$$0",
+  "methods":[{"name":"<init>","parameterTypes":["java.lang.Class"] }]
+},
+{
+  "name":"net.devh.boot.grpc.server.autoconfigure.GrpcHealthServiceAutoConfiguration$$SpringCGLIB$$FastClass$$1",
+  "methods":[{"name":"<init>","parameterTypes":["java.lang.Class"] }]
+},
+{
+  "name":"net.devh.boot.grpc.server.autoconfigure.GrpcReflectionServiceAutoConfiguration",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllDeclaredConstructors":true
+},
+{
+  "name":"net.devh.boot.grpc.server.autoconfigure.GrpcReflectionServiceAutoConfiguration$$SpringCGLIB$$0",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllDeclaredConstructors":true,
+  "fields":[{"name":"CGLIB$FACTORY_DATA"}],
+  "methods":[{"name":"<init>","parameterTypes":[] }, {"name":"CGLIB$SET_STATIC_CALLBACKS","parameterTypes":["org.springframework.cglib.proxy.Callback[]"] }, {"name":"CGLIB$SET_THREAD_CALLBACKS","parameterTypes":["org.springframework.cglib.proxy.Callback[]"] }]
+},
+{
+  "name":"net.devh.boot.grpc.server.autoconfigure.GrpcReflectionServiceAutoConfiguration$$SpringCGLIB$$FastClass$$0",
+  "methods":[{"name":"<init>","parameterTypes":["java.lang.Class"] }]
+},
+{
+  "name":"net.devh.boot.grpc.server.autoconfigure.GrpcReflectionServiceAutoConfiguration$$SpringCGLIB$$FastClass$$1",
+  "methods":[{"name":"<init>","parameterTypes":["java.lang.Class"] }]
+},
+{
+  "name":"net.devh.boot.grpc.server.autoconfigure.GrpcServerAutoConfiguration",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllDeclaredConstructors":true,
+  "methods":[{"name":"grpcRequestScope","parameterTypes":[] }]
+},
+{
+  "name":"net.devh.boot.grpc.server.autoconfigure.GrpcServerFactoryAutoConfiguration",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllDeclaredConstructors":true
+},
+{
+  "name":"net.devh.boot.grpc.server.autoconfigure.GrpcServerMetricAutoConfiguration",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllDeclaredConstructors":true
+},
+{
+  "name":"net.devh.boot.grpc.server.autoconfigure.GrpcServerMicrometerTraceAutoConfiguration",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllDeclaredConstructors":true
+},
+{
+  "name":"net.devh.boot.grpc.server.condition.ConditionalOnInterprocessServer",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"net.devh.boot.grpc.server.config.GrpcServerProperties",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllDeclaredConstructors":true,
+  "methods":[{"name":"close","parameterTypes":[] }, {"name":"shutdown","parameterTypes":[] }]
+},
+{
+  "name":"net.devh.boot.grpc.server.config.GrpcServerProperties$Security",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllDeclaredConstructors":true
+},
+{
+  "name":"net.devh.boot.grpc.server.interceptor.AnnotationGlobalServerInterceptorConfigurer",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllDeclaredConstructors":true,
+  "methods":[{"name":"close","parameterTypes":[] }, {"name":"shutdown","parameterTypes":[] }]
+},
+{
+  "name":"net.devh.boot.grpc.server.interceptor.GlobalServerInterceptorConfigurer",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllPublicMethods":true,
+  "queryAllDeclaredConstructors":true
+},
+{
+  "name":"net.devh.boot.grpc.server.interceptor.GlobalServerInterceptorRegistry",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllDeclaredConstructors":true,
+  "methods":[{"name":"close","parameterTypes":[] }, {"name":"shutdown","parameterTypes":[] }]
+},
+{
+  "name":"net.devh.boot.grpc.server.interceptor.GrpcGlobalServerInterceptor",
+  "queryAllDeclaredMethods":true,
+  "methods":[{"name":"value","parameterTypes":[] }]
+},
+{
+  "name":"net.devh.boot.grpc.server.nameresolver.SelfNameResolverFactory",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllDeclaredConstructors":true,
+  "methods":[{"name":"close","parameterTypes":[] }, {"name":"shutdown","parameterTypes":[] }]
+},
+{
+  "name":"net.devh.boot.grpc.server.scope.GrpcRequestScope",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllDeclaredConstructors":true,
+  "methods":[{"name":"close","parameterTypes":[] }, {"name":"shutdown","parameterTypes":[] }]
+},
+{
+  "name":"net.devh.boot.grpc.server.serverfactory.AbstractGrpcServerFactory",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllDeclaredConstructors":true,
+  "methods":[{"name":"configureConnectionLimits","parameterTypes":["io.grpc.ServerBuilder"] }, {"name":"configureKeepAlive","parameterTypes":["io.grpc.ServerBuilder"] }, {"name":"configureSecurity","parameterTypes":["io.grpc.ServerBuilder"] }]
+},
+{
+  "name":"net.devh.boot.grpc.server.serverfactory.GrpcServerConfigurer",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllDeclaredConstructors":true,
+  "methods":[{"name":"close","parameterTypes":[] }, {"name":"shutdown","parameterTypes":[] }]
+},
+{
+  "name":"net.devh.boot.grpc.server.serverfactory.GrpcServerFactory",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllPublicMethods":true,
+  "queryAllDeclaredConstructors":true
+},
+{
+  "name":"net.devh.boot.grpc.server.serverfactory.GrpcServerLifecycle",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllDeclaredConstructors":true,
+  "methods":[{"name":"close","parameterTypes":[] }, {"name":"shutdown","parameterTypes":[] }]
+},
+{
+  "name":"net.devh.boot.grpc.server.serverfactory.InProcessGrpcServerFactory"
+},
+{
+  "name":"net.devh.boot.grpc.server.serverfactory.NettyGrpcServerFactory"
+},
+{
+  "name":"net.devh.boot.grpc.server.serverfactory.ShadedNettyGrpcServerFactory",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllDeclaredConstructors":true,
+  "methods":[{"name":"close","parameterTypes":[] }, {"name":"shutdown","parameterTypes":[] }]
+},
+{
+  "name":"net.devh.boot.grpc.server.service.GrpcService",
+  "queryAllDeclaredMethods":true,
+  "methods":[{"name":"value","parameterTypes":[] }]
+},
+{
+  "name":"net.devh.boot.grpc.server.service.GrpcServiceDiscoverer",
   "allDeclaredFields":true,
   "queryAllDeclaredMethods":true,
   "queryAllDeclaredConstructors":true,
@@ -1886,6 +2159,13 @@
   "name":"org.springframework.beans.factory.config.PropertyResourceConfigurer",
   "allDeclaredFields":true,
   "queryAllDeclaredMethods":true,
+  "queryAllDeclaredConstructors":true
+},
+{
+  "name":"org.springframework.beans.factory.config.Scope",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllPublicMethods":true,
   "queryAllDeclaredConstructors":true
 },
 {
@@ -3073,6 +3353,13 @@
   "allDeclaredFields":true,
   "queryAllDeclaredMethods":true,
   "queryAllPublicMethods":true
+},
+{
+  "name":"org.springframework.boot.actuate.info.InfoContributor",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllDeclaredConstructors":true,
+  "methods":[{"name":"close","parameterTypes":[] }, {"name":"shutdown","parameterTypes":[] }]
 },
 {
   "name":"org.springframework.boot.actuate.info.InfoEndpoint"
@@ -4929,7 +5216,8 @@
 },
 {
   "name":"org.springframework.boot.convert.DataSizeUnit",
-  "queryAllDeclaredMethods":true
+  "queryAllDeclaredMethods":true,
+  "methods":[{"name":"value","parameterTypes":[] }]
 },
 {
   "name":"org.springframework.boot.convert.DurationUnit",
@@ -5684,6 +5972,15 @@
   "name":"org.springframework.cloud.client.discovery.DiscoveryClient"
 },
 {
+  "name":"org.springframework.cloud.consul.serviceregistry.ConsulRegistration"
+},
+{
+  "name":"org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration"
+},
+{
+  "name":"org.springframework.cloud.zookeeper.serviceregistry.ZookeeperRegistration"
+},
+{
   "name":"org.springframework.context.ApplicationContextAware",
   "allDeclaredFields":true,
   "queryAllDeclaredMethods":true,
@@ -6426,6 +6723,10 @@
 },
 {
   "name":"org.springframework.stereotype.Indexed",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"org.springframework.stereotype.Service",
   "queryAllDeclaredMethods":true
 },
 {

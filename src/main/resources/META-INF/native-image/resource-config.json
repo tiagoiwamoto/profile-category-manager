@@ -63,7 +63,13 @@
   }, {
     "pattern":"\\Qbanner.txt\\E"
   }, {
+    "pattern":"\\Qbr/com/kamehouse/profilecategorymanager/CategoryServiceGrpc$AsyncService.class\\E"
+  }, {
+    "pattern":"\\Qbr/com/kamehouse/profilecategorymanager/CategoryServiceGrpc$CategoryServiceImplBase.class\\E"
+  }, {
     "pattern":"\\Qbr/com/kamehouse/profilecategorymanager/\\E"
+  }, {
+    "pattern":"\\Qbr/com/kamehouse/profilecategorymanager/adapter/CategoryAdapter.class\\E"
   }, {
     "pattern":"\\Qbr/com/kamehouse/profilecategorymanager/config/ErrorHandler.class\\E"
   }, {
@@ -90,6 +96,8 @@
     "pattern":"\\Qconfig/application.yml\\E"
   }, {
     "pattern":"\\Qgit.properties\\E"
+  }, {
+    "pattern":"\\Qio/grpc/BindableService.class\\E"
   }, {
     "pattern":"\\Qjndi.properties\\E"
   }, {
@@ -118,6 +126,26 @@
     "pattern":"\\Qnet/devh/boot/grpc/client/autoconfigure/GrpcClientSecurityAutoConfiguration.class\\E"
   }, {
     "pattern":"\\Qnet/devh/boot/grpc/common/autoconfigure/GrpcCommonCodecAutoConfiguration.class\\E"
+  }, {
+    "pattern":"\\Qnet/devh/boot/grpc/server/autoconfigure/GrpcAdviceAutoConfiguration.class\\E"
+  }, {
+    "pattern":"\\Qnet/devh/boot/grpc/server/autoconfigure/GrpcHealthServiceAutoConfiguration.class\\E"
+  }, {
+    "pattern":"\\Qnet/devh/boot/grpc/server/autoconfigure/GrpcReflectionServiceAutoConfiguration.class\\E"
+  }, {
+    "pattern":"\\Qnet/devh/boot/grpc/server/autoconfigure/GrpcServerAutoConfiguration.class\\E"
+  }, {
+    "pattern":"\\Qnet/devh/boot/grpc/server/autoconfigure/GrpcServerFactoryAutoConfiguration.class\\E"
+  }, {
+    "pattern":"\\Qnet/devh/boot/grpc/server/autoconfigure/GrpcServerMetricAutoConfiguration.class\\E"
+  }, {
+    "pattern":"\\Qnet/devh/boot/grpc/server/autoconfigure/GrpcServerMicrometerTraceAutoConfiguration.class\\E"
+  }, {
+    "pattern":"\\Qnet/devh/boot/grpc/server/condition/ConditionalOnInterprocessServer$NoServerPortCondition.class\\E"
+  }, {
+    "pattern":"\\Qnet/devh/boot/grpc/server/condition/ConditionalOnInterprocessServer.class\\E"
+  }, {
+    "pattern":"\\Qnet/devh/boot/grpc/server/service/GrpcService.class\\E"
   }, {
     "pattern":"\\Qorg/springframework/aot/hint/RuntimeHintsRegistrar.class\\E"
   }, {
@@ -680,6 +708,8 @@
     "pattern":"\\Qorg/springframework/context/ApplicationContextAware.class\\E"
   }, {
     "pattern":"\\Qorg/springframework/context/ResourceLoaderAware.class\\E"
+  }, {
+    "pattern":"\\Qorg/springframework/context/annotation/Bean.class\\E"
   }, {
     "pattern":"\\Qorg/springframework/context/annotation/Conditional.class\\E"
   }, {
