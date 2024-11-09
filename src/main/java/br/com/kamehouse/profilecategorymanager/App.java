@@ -1,15 +1,13 @@
 package br.com.kamehouse.profilecategorymanager;
 
-import br.com.kamehouse.profilecategorymanager.config.GrpcRuntimeHints;
+import br.com.kamehouse.profilecategorymanager.config.HintsConfig;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ImportRuntimeHints;
 
-import java.util.Map;
-
 @SpringBootApplication
-@ImportRuntimeHints(GrpcRuntimeHints.class)
+@ImportRuntimeHints(HintsConfig.class)
 @Slf4j
 public class App {
 
