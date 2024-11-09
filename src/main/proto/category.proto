@@ -21,9 +21,9 @@ message CategoryList {
 }
 
 service CategoryService {
-  rpc CreateCategory(Category) returns (CategoryId);
-  rpc GetCategory(CategoryId) returns (Category);
-  rpc UpdateCategory(Category) returns (Category);
-  rpc DeleteCategory(CategoryId) returns (CategoryId);
-  rpc ListCategories(google.protobuf.Empty) returns (CategoryList);
+  rpc CreateCategory(Category) returns (CategoryId){};
+  rpc GetCategory(CategoryId) returns (Category){};
+  rpc UpdateCategory(Category) returns (Category){};
+  rpc DeleteCategory(CategoryId) returns (CategoryId){};
+  rpc ListCategories(google.protobuf.Empty) returns (CategoryList){};
 }
